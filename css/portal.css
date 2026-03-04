@@ -1,0 +1,276 @@
+/* =========================
+   PORTAL DO CLIENTE PREMIUM
+========================= */
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #243248;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-yellow: #facc15;
+
+  --border-soft: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   Base
+========================= */
+
+body {
+  background: linear-gradient(135deg, #0f172a, #0b1220);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* =========================
+   Títulos
+========================= */
+
+h2 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h5 {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   Cards Premium
+========================= */
+
+.card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: var(--bg-card-hover) !important;
+}
+
+.card-body p {
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.card strong {
+  color: var(--text-primary);
+}
+
+/* =========================
+   Botões Premium
+========================= */
+
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 8px 18px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+  border: none;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--accent-green), #059669);
+  border: none;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--accent-red), #dc2626);
+  border: none;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* =========================
+   Timeline Premium
+========================= */
+
+.timeline-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 25px;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #334155;
+  z-index: 1;
+}
+
+.timeline-step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.timeline-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.05);
+}
+
+.timeline-concluida {
+  background: var(--accent-green);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+}
+
+.timeline-cancelado {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.6);
+}
+
+.btn-outline-primary {
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.timeline-ativa {
+  background: var(--accent-yellow);
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+}
+
+.timeline-futura {
+  background: #475569;
+}
+
+.timeline-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   Tabela Pagamentos
+========================= */
+
+.table {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.table th {
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.table td {
+  border-top: 1px solid var(--border-soft);
+  vertical-align: middle;
+}
+
+/* =========================
+   Status Badges
+========================= */
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-proposta {
+  background: var(--accent-blue);
+}
+
+.status-ativo {
+  background: var(--accent-yellow);
+}
+
+.status-finalizado {
+  background: var(--accent-green);
+}
+
+.status-cancelado {
+  background: var(--accent-red);
+}
+
+/* =========================
+   Links
+========================= */
+
+a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* =========================
+   Responsividade
+========================= */
+
+@media (max-width: 768px) {
+
+  .timeline-wrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .timeline-wrapper::before {
+    display: none;
+  }
+
+  .timeline-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .timeline-circle {
+    margin: 0;
+  }
+
+  .timeline-label {
+    font-size: 0.8rem;
+  }
+}
