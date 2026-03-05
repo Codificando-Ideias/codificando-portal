@@ -35,7 +35,7 @@ portal-codificando-ideias/
 ├── README.md        # Documentação do projeto
 └── .gitignore       # Regras de versionamento
 ```
-🛠️ Stack Tecnológica
+## 🛠️ Stack Tecnológica
 
 O projeto utiliza tecnologias web modernas e leves:
 
@@ -49,7 +49,7 @@ GitHub Pages (deploy)
 
 (Integrações adicionais podem ser incorporadas conforme evolução do portal.)
 
-📦 Deploy
+## 📦 Deploy
 
 O portal é hospedado utilizando GitHub Pages.
 
@@ -61,7 +61,7 @@ Faça push para o branch principal
 
 O GitHub Pages realiza a atualização automaticamente
 
-🎯 Objetivo
+## 🎯 Objetivo
 
 Criar uma base sólida para presença digital do portal, mantendo:
 
@@ -73,7 +73,7 @@ Separação clara entre layout, estilo e comportamento
 
 Facilidade de evolução futura
 
-📬 Contato
+## 📬 Contato
 
 Para mais informações ou parcerias, acesse os canais oficiais da Codificando Ideias.
 
@@ -83,6 +83,6 @@ Site institucional: https://www.codificandoideias.com
 
 Instagram: https://www.instagram.com/codificando.ideias
 
-📄 Licença
+## 📄 Licença
 
 Este projeto é de propriedade da Codificando Ideias.
