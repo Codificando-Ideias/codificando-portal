@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Portal do Cliente</title>
+  <title>Codificando Ideias | Portal do Cliente</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/portal.css" />
@@ -75,14 +75,29 @@
     </div>
   </div>
 
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+  <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body">
+        Mensagem enviada com sucesso!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <!-- Bootstrap JS (OBRIGATÓRIO para tooltip) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="./js/configSettings.js"></script>
 <script src="./js/supabaseClientPortal.js"></script>
+<script src="./js/toast.js"></script>
+<script src="./js/documentosPdf.js"></script>
 <script src="./js/dashboard-portal.js"></script>
 
 </body>

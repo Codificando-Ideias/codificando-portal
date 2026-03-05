@@ -140,11 +140,10 @@ function renderizarDados() {
 function renderizarProposta() {
 
   let botoes = `
-    <a href="${clienteAtual.proposta_url}" 
-       target="_blank" 
-       class="btn btn-primary me-2">
-       📄 Visualizar Proposta
-    </a>
+    <button class="btn btn-primary"
+          onclick="visualizarProposta('${clienteAtual.lead_id}')">
+          📄 Visualizar Proposta
+        </button>
   `;
 
   // ==========================================
@@ -175,11 +174,10 @@ if (
   botoes += `
     <hr class="my-3">
 
-    <a href="${clienteAtual.contrato_url}" 
-       target="_blank"
-       class="btn btn-primary me-2">
-       📄 Visualizar Contrato
-    </a>
+    <button class="btn btn-primary"
+          onclick="visualizarContrato('${clienteAtual.lead_id}')">
+          📄 Visualizar Contrato
+        </button>
   `;
 }
 
@@ -286,6 +284,13 @@ async function aceitarProposta() {
       .from("leads")
       .update({ status: clienteAtual.status })
       .eq("id", clienteAtual.lead_id);
+
+  const { data: leadAtual } = await supabaseLogin
+  .from("leads")
+  .select("*")
+  .eq("id", clienteAtual.lead_id);
+    //Atualiza lead para "Contrato" e gera o contrato para liberar acesso ao contrato
+    await gerarContratoPDF(leadAtual[0]);
 
     atualizarTela();
   }
@@ -413,6 +418,7 @@ function reabrirFluxo() {
 
   atualizarTela();
 }
+
 function renderizarTimeline() {
 
   if (clienteAtual.status === "Cancelado") {
